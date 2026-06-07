@@ -3,700 +3,107 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daniel — Ingeniería de Sistemas · UD</title>
+<title>Academica — Recursos UD</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/src/css/style.css">
-</head>
+<link rel="stylesheet" href="src/css/style.css">
+</head> 
 <body>
-<nav>
-  <div class="nav-brand">
-    <span class="dot"></span>
-    Daniel · Ing. Sistemas UD
-  </div>
-  <ul class="nav-links">
-    <li><a href="#sem1" class="active">1er sem</a></li>
-    <li><a href="#sem2">2do</a></li>
-    <li><a href="#sem3">3ro</a></li>
-    <li><a href="#sem4">4to</a></li>
-    <li><a href="#sem5">5to</a></li>
-    <li><a href="#sem6">6to</a></li>
-    <li><a href="#sem7">7mo</a></li>
-    <li><a href="#sem8">8vo</a></li>
-    <li><a href="#sem9">9no</a></li>
-    <li><a href="#recursos">Recursos</a></li>
-  </ul>
-</nav>
 
-<div class="hero">
-  <div class="hero-inner">
-    <div class="hero-badge">
-      <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" r="4" stroke="currentColor" stroke-width="1.5"/></svg>
-      Universidad Distrital Francisco José de Caldas
-    </div>
-    <h1>Ingeniería de<br><em>Sistemas</em></h1>
-    <p>Apuntes, libros y recursos organizados por semestre. Útil para estudiantes de la UDFJC que quieran referencias rápidas de cada materia.</p>
-    <div class="hero-meta">
-      <span>
-        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-        Facultad de Ingeniería
-      </span>
-      <span>
-        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        Actualizado 2025
-      </span>
-    </div>
-  </div>
-</div>
+<!-- HAMBURGER BUTTON -->
+<button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+</button>
+
+<!-- MODULAR SIDEBAR -->
+<aside id="sidebar-container" class="collapsed"></aside>
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
 
 <main>
+<div class="hero">
+  <div class="hero-inner">
+    <h1>Ingeniería de<br><em>Sistemas</em></h1>
+    <p>Apuntes, libros y recursos organizados por semestre. Útil para estudiantes de la UDFJC que quieran referencias rápidas de cada materia.</p>
+  </div>
+</div>
 
   <!-- SEMESTRE 1 -->
   <div class="section-header" id="sem1">
     <h2>Primer semestre</h2>
-    <span class="sem-badge">SEM 1</span>
     <div class="section-line"></div>
   </div>
   <div class="cards-grid">
-
-    <div class="card s1 fade-in">
+    <div class="card s1">
       <div class="card-icon">💻</div>
       <h3>Programación Básica I</h3>
       <div class="card-topics">
         <span class="topic-tag">C++</span>
-        <span class="topic-tag">Variables</span>
         <span class="topic-tag">Ciclos</span>
-        <span class="topic-tag">Arreglos</span>
         <span class="topic-tag">Funciones</span>
       </div>
-      <div class="card-divider"></div>
       <div class="card-links">
-        <a href="https://www.learncpp.com/" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          LearnCpp.com (referencia completa)
-        </a>
-        <a href="https://cppreference.com" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          cppreference.com
-        </a>
-        <a href="https://www.youtube.com/@TheCherno" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          The Cherno — C++ en YouTube
-        </a>
+        <a href="https://www.learncpp.com/" target="_blank">LearnCpp.com</a>
+        <a href="https://cppreference.com" target="_blank">cppreference.com</a>
       </div>
     </div>
-
-    <div class="card s1 fade-in">
+    <div class="card s1">
       <div class="card-icon">📐</div>
-      <h3>Matemáticas I (Cálculo Diferencial)</h3>
+      <h3>Matemáticas I</h3>
       <div class="card-topics">
         <span class="topic-tag">Límites</span>
         <span class="topic-tag">Derivadas</span>
-        <span class="topic-tag">Funciones</span>
       </div>
-      <div class="card-divider"></div>
       <div class="card-links">
-        <a href="https://www.stewartcalculus.com/" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          Stewart — Cálculo (libro base)
-        </a>
-        <a href="https://www.khanacademy.org/math/calculus-1" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          Khan Academy — Cálculo 1
-        </a>
+        <a href="https://www.stewartcalculus.com/" target="_blank">Stewart — Cálculo</a>
       </div>
     </div>
-
-    <div class="card s1 fade-in">
-      <div class="card-icon">⚡</div>
-      <h3>Física I (Mecánica)</h3>
-      <div class="card-topics">
-        <span class="topic-tag">Cinemática</span>
-        <span class="topic-tag">Dinámica</span>
-        <span class="topic-tag">Energía</span>
-      </div>
-      <div class="card-divider"></div>
-      <div class="card-links">
-        <a href="https://openstax.org/subjects/science" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          OpenStax University Physics (gratis)
-        </a>
-        <a href="https://www.feynmanlectures.caltech.edu/" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          Feynman Lectures (Caltech)
-        </a>
-      </div>
-    </div>
-
-    <div class="card s1 fade-in">
-      <div class="card-icon">🔢</div>
-      <h3>Lógica Matemática</h3>
-      <div class="card-topics">
-        <span class="topic-tag">Proposiciones</span>
-        <span class="topic-tag">Predicados</span>
-        <span class="topic-tag">Demostraciones</span>
-      </div>
-      <div class="card-divider"></div>
-      <div class="card-links">
-        <a href="https://www.gutenberg.org/ebooks/4383" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          Project Gutenberg — lógica clásica
-        </a>
-        <a href="https://www.wolframalpha.com/" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          Wolfram Alpha (verificar tablas)
-        </a>
-      </div>
-    </div>
-
   </div>
 
   <!-- SEMESTRE 2 -->
   <div class="section-header" id="sem2">
     <h2>Segundo semestre</h2>
-    <span class="sem-badge">SEM 2</span>
     <div class="section-line"></div>
   </div>
   <div class="cards-grid">
-
-    <div class="card s2 fade-in">
+    <div class="card s2">
       <div class="card-icon">💾</div>
       <h3>Programación Básica II</h3>
       <div class="card-topics">
         <span class="topic-tag">Punteros</span>
         <span class="topic-tag">Structs</span>
-        <span class="topic-tag">Archivos</span>
-        <span class="topic-tag">POO básica</span>
       </div>
-      <div class="card-divider"></div>
       <div class="card-links">
-        <a href="https://www.learncpp.com/cpp-tutorial/introduction-to-classes/" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          LearnCpp — Clases y POO
-        </a>
-      </div>
-    </div>
-
-    <div class="card s2 fade-in">
-      <div class="card-icon">∫</div>
-      <h3>Matemáticas II (Cálculo Integral)</h3>
-      <div class="card-topics">
-        <span class="topic-tag">Integrales</span>
-        <span class="topic-tag">Técnicas</span>
-        <span class="topic-tag">Series</span>
-      </div>
-      <div class="card-divider"></div>
-      <div class="card-links">
-        <a href="https://www.khanacademy.org/math/calculus-2" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          Khan Academy — Cálculo 2
-        </a>
-      </div>
-    </div>
-
-    <div class="card s2 fade-in">
-      <div class="card-icon">💡</div>
-      <h3>Circuitos Eléctricos</h3>
-      <div class="card-topics">
-        <span class="topic-tag">Ley de Ohm</span>
-        <span class="topic-tag">Kirchhoff</span>
-        <span class="topic-tag">AC/DC</span>
-      </div>
-      <div class="card-divider"></div>
-      <div class="card-links">
-        <a href="https://www.allaboutcircuits.com/textbook/" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          All About Circuits — Textbook gratis
-        </a>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- SEMESTRE 3 -->
-  <div class="section-header" id="sem3">
-    <h2>Tercer semestre</h2>
-    <span class="sem-badge">SEM 3</span>
-    <div class="section-line"></div>
-  </div>
-  <div class="cards-grid">
-
-    <div class="card s3 fade-in">
-      <div class="card-icon">🏗️</div>
-      <h3>Estructuras de Datos</h3>
-      <div class="card-topics">
-        <span class="topic-tag">Listas</span>
-        <span class="topic-tag">Árboles</span>
-        <span class="topic-tag">Grafos</span>
-        <span class="topic-tag">Hash</span>
-      </div>
-      <div class="card-divider"></div>
-      <div class="card-links">
-        <a href="https://visualgo.net/en" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          VisuAlgo — estructuras animadas
-        </a>
-        <a href="https://www.geeksforgeeks.org/data-structures/" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          GeeksforGeeks — Estructuras
-        </a>
-      </div>
-    </div>
-
-    <div class="card s3 fade-in">
-      <div class="card-icon">🔣</div>
-      <h3>Álgebra Lineal</h3>
-      <div class="card-topics">
-        <span class="topic-tag">Matrices</span>
-        <span class="topic-tag">Vectores</span>
-        <span class="topic-tag">Eigenvalores</span>
-      </div>
-      <div class="card-divider"></div>
-      <div class="card-links">
-        <a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          MIT OpenCourseWare — Gilbert Strang
-        </a>
-        <a href="https://www.3blue1brown.com/topics/linear-algebra" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          3Blue1Brown — Essence of LA
-        </a>
-      </div>
-    </div>
-
-    <div class="card s3 fade-in">
-      <div class="card-icon">🖥️</div>
-      <h3>Arquitectura de Computadores</h3>
-      <div class="card-topics">
-        <span class="topic-tag">CPU</span>
-        <span class="topic-tag">Memoria</span>
-        <span class="topic-tag">Ensamblador</span>
-      </div>
-      <div class="card-divider"></div>
-      <div class="card-links">
-        <a href="https://www.nand2tetris.org/" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          Nand2Tetris — construye una PC
-        </a>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- SEMESTRE 4 -->
-  <div class="section-header" id="sem4">
-    <h2>Cuarto semestre</h2>
-    <span class="sem-badge">SEM 4</span>
-    <div class="section-line"></div>
-  </div>
-  <div class="cards-grid">
-
-    <div class="card s4 fade-in">
-      <div class="card-icon">🧮</div>
-      <h3>Análisis de Algoritmos</h3>
-      <div class="card-topics">
-        <span class="topic-tag">Big-O</span>
-        <span class="topic-tag">Divide y vence</span>
-        <span class="topic-tag">Greedy</span>
-        <span class="topic-tag">DP</span>
-      </div>
-      <div class="card-divider"></div>
-      <div class="card-links">
-        <a href="https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          CLRS — Introduction to Algorithms
-        </a>
-        <a href="https://cp-algorithms.com/" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          CP-Algorithms (referencia rápida)
-        </a>
-      </div>
-    </div>
-
-    <div class="card s4 fade-in">
-      <div class="card-icon">🗄️</div>
-      <h3>Bases de Datos I</h3>
-      <div class="card-topics">
-        <span class="topic-tag">Modelo ER</span>
-        <span class="topic-tag">SQL</span>
-        <span class="topic-tag">Normalización</span>
-      </div>
-      <div class="card-divider"></div>
-      <div class="card-links">
-        <a href="https://sqlbolt.com/" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          SQLBolt — SQL interactivo
-        </a>
-        <a href="https://use-the-index-luke.com/" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          Use The Index, Luke!
-        </a>
-      </div>
-    </div>
-
-    <div class="card s4 fade-in">
-      <div class="card-icon">🌐</div>
-      <h3>Redes de Computadores I</h3>
-      <div class="card-topics">
-        <span class="topic-tag">TCP/IP</span>
-        <span class="topic-tag">OSI</span>
-        <span class="topic-tag">DNS</span>
-        <span class="topic-tag">HTTP</span>
-      </div>
-      <div class="card-divider"></div>
-      <div class="card-links">
-        <a href="https://gaia.cs.umass.edu/kurose_ross/index.php" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          Kurose & Ross — Computer Networks
-        </a>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- SEMESTRE 5 -->
-  <div class="section-header" id="sem5">
-    <h2>Quinto semestre</h2>
-    <span class="sem-badge">SEM 5</span>
-    <div class="section-line"></div>
-  </div>
-  <div class="cards-grid">
-
-    <div class="card s5 fade-in">
-      <div class="card-icon">⚙️</div>
-      <h3>Sistemas Operativos</h3>
-      <div class="card-topics">
-        <span class="topic-tag">Procesos</span>
-        <span class="topic-tag">Memoria virtual</span>
-        <span class="topic-tag">Scheduling</span>
-        <span class="topic-tag">File systems</span>
-      </div>
-      <div class="card-divider"></div>
-      <div class="card-links">
-        <a href="https://pages.cs.wisc.edu/~remzi/OSTEP/" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          OSTEP — Operating Systems (gratis)
-        </a>
-        <a href="https://linux.die.net/man/" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          Linux Man Pages
-        </a>
-      </div>
-    </div>
-
-    <div class="card s5 fade-in">
-      <div class="card-icon">🧩</div>
-      <h3>Ingeniería de Software I</h3>
-      <div class="card-topics">
-        <span class="topic-tag">UML</span>
-        <span class="topic-tag">Scrum</span>
-        <span class="topic-tag">Requisitos</span>
-        <span class="topic-tag">Casos de uso</span>
-      </div>
-      <div class="card-divider"></div>
-      <div class="card-links">
-        <a href="https://www.uml-diagrams.org/" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          UML Diagrams — referencia
-        </a>
-        <a href="https://agilemanifesto.org/" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          Manifiesto Ágil
-        </a>
-      </div>
-    </div>
-
-    <div class="card s5 fade-in">
-      <div class="card-icon">📊</div>
-      <h3>Probabilidad y Estadística</h3>
-      <div class="card-topics">
-        <span class="topic-tag">Distribuciones</span>
-        <span class="topic-tag">Inferencia</span>
-        <span class="topic-tag">Regresión</span>
-      </div>
-      <div class="card-divider"></div>
-      <div class="card-links">
-        <a href="https://www.khanacademy.org/math/statistics-probability" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          Khan Academy — Estadística
-        </a>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- SEMESTRES 6-8 (compactos) -->
-  <div class="section-header" id="sem6">
-    <h2>Sexto semestre</h2>
-    <span class="sem-badge">SEM 6</span>
-    <div class="section-line"></div>
-  </div>
-  <div class="cards-grid">
-    <div class="card s6 fade-in">
-      <div class="card-icon">🔒</div>
-      <h3>Seguridad Informática</h3>
-      <div class="card-topics">
-        <span class="topic-tag">Criptografía</span>
-        <span class="topic-tag">Redes seguras</span>
-        <span class="topic-tag">Vulnerabilidades</span>
-      </div>
-      <div class="card-divider"></div>
-      <div class="card-links">
-        <a href="https://tryhackme.com/" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          TryHackMe — práctica interactiva
-        </a>
-        <a href="https://owasp.org/www-project-top-ten/" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          OWASP Top 10
-        </a>
-      </div>
-    </div>
-    <div class="card s6 fade-in">
-      <div class="card-icon">🗃️</div>
-      <h3>Bases de Datos II</h3>
-      <div class="card-topics">
-        <span class="topic-tag">NoSQL</span>
-        <span class="topic-tag">Transacciones</span>
-        <span class="topic-tag">Concurrencia</span>
-      </div>
-      <div class="card-divider"></div>
-      <div class="card-links">
-        <a href="https://www.mongodb.com/docs/manual/" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          MongoDB Docs
-        </a>
-      </div>
-    </div>
-    <div class="card s6 fade-in">
-      <div class="card-icon">🤖</div>
-      <h3>Inteligencia Artificial I</h3>
-      <div class="card-topics">
-        <span class="topic-tag">Búsqueda</span>
-        <span class="topic-tag">Lógica</span>
-        <span class="topic-tag">Agentes</span>
-      </div>
-      <div class="card-divider"></div>
-      <div class="card-links">
-        <a href="https://aima.cs.berkeley.edu/" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          Russell & Norvig — AIMA
-        </a>
+        <a href="https://www.learncpp.com/cpp-tutorial/introduction-to-classes/" target="_blank">LearnCpp — Clases</a>
       </div>
     </div>
   </div>
-
-  <div class="section-header" id="sem7">
-    <h2>Séptimo semestre</h2>
-    <span class="sem-badge">SEM 7</span>
-    <div class="section-line"></div>
-  </div>
-  <div class="cards-grid">
-    <div class="card s7 fade-in">
-      <div class="card-icon">☁️</div>
-      <h3>Computación en la Nube</h3>
-      <div class="card-topics">
-        <span class="topic-tag">AWS/GCP</span>
-        <span class="topic-tag">Docker</span>
-        <span class="topic-tag">Kubernetes</span>
-      </div>
-      <div class="card-divider"></div>
-      <div class="card-links">
-        <a href="https://aws.amazon.com/training/digital/" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          AWS Training (gratis)
-        </a>
-        <a href="https://docs.docker.com/get-started/" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          Docker — Getting Started
-        </a>
-      </div>
-    </div>
-    <div class="card s7 fade-in">
-      <div class="card-icon">📱</div>
-      <h3>Desarrollo de Aplicaciones</h3>
-      <div class="card-topics">
-        <span class="topic-tag">Web</span>
-        <span class="topic-tag">Móvil</span>
-        <span class="topic-tag">APIs REST</span>
-      </div>
-      <div class="card-divider"></div>
-      <div class="card-links">
-        <a href="https://developer.mozilla.org/es/" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          MDN Web Docs (en español)
-        </a>
-      </div>
-    </div>
-    <div class="card s7 fade-in">
-      <div class="card-icon">🧠</div>
-      <h3>Machine Learning</h3>
-      <div class="card-topics">
-        <span class="topic-tag">Regresión</span>
-        <span class="topic-tag">Clasificación</span>
-        <span class="topic-tag">Redes neuronales</span>
-      </div>
-      <div class="card-divider"></div>
-      <div class="card-links">
-        <a href="https://www.coursera.org/learn/machine-learning" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          Coursera — Andrew Ng ML
-        </a>
-        <a href="https://scikit-learn.org/stable/tutorial/" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          scikit-learn — Tutorial
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div class="section-header" id="sem8">
-    <h2>Octavo semestre</h2>
-    <span class="sem-badge">SEM 8</span>
-    <div class="section-line"></div>
-  </div>
-  <div class="cards-grid">
-    <div class="card s8 fade-in">
-      <div class="card-icon">📋</div>
-      <h3>Gestión de Proyectos de Software</h3>
-      <div class="card-topics">
-        <span class="topic-tag">PMI / PMBOK</span>
-        <span class="topic-tag">Riesgos</span>
-        <span class="topic-tag">Estimación</span>
-      </div>
-      <div class="card-divider"></div>
-      <div class="card-links">
-        <a href="https://www.pmi.org/learning/library" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          PMI Library
-        </a>
-      </div>
-    </div>
-    <div class="card s8 fade-in">
-      <div class="card-icon">🔬</div>
-      <h3>Proyecto de Grado</h3>
-      <div class="card-topics">
-        <span class="topic-tag">Investigación</span>
-        <span class="topic-tag">Metodología</span>
-        <span class="topic-tag">Documentación</span>
-      </div>
-      <div class="card-divider"></div>
-      <div class="card-links">
-        <a href="https://www.ieee.org/publications/subscriptions/index.html" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          IEEE — artículos académicos
-        </a>
-        <a href="https://scholar.google.com/" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          Google Scholar
-        </a>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="section-header" id="sem9">
-    <h2>Noveno semestre</h2>
-    <span class="sem-badge">SEM 9</span>
-    <div class="section-line"></div>
-  </div>
-  <div class="cards-grid">
-    <div class="card s9 fade-in">
-      <div class="card-icon">📋</div>
-      <h3>Gestión de Proyectos de Software</h3>
-      <div class="card-topics">
-        <span class="topic-tag">PMI / PMBOK</span>
-        <span class="topic-tag">Riesgos</span>
-        <span class="topic-tag">Estimación</span>
-      </div>
-      <div class="card-divider"></div>
-      <div class="card-links">
-        <a href="https://www.pmi.org/learning/library" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          PMI Library
-        </a>
-      </div>
-    </div>
-    <div class="card s9 fade-in">
-      <div class="card-icon">🔬</div>
-      <h3>Proyecto de Grado</h3>
-      <div class="card-topics">
-        <span class="topic-tag">Investigación</span>
-        <span class="topic-tag">Metodología</span>
-        <span class="topic-tag">Documentación</span>
-      </div>
-      <div class="card-divider"></div>
-      <div class="card-links">
-        <a href="https://www.ieee.org/publications/subscriptions/index.html" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          IEEE — artículos académicos
-        </a>
-        <a href="https://scholar.google.com/" target="_blank">
-          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          Google Scholar
-        </a>
-      </div>
-    </div>
-  </div>
-
-
 
   <!-- RECURSOS GENERALES -->
   <div class="section-header" id="recursos">
     <h2>Recursos generales</h2>
-    <span class="sem-badge">TODOS LOS SEM</span>
     <div class="section-line"></div>
   </div>
-  <div class="resources-grid">
-    <a class="resource-card" href="https://github.com/" target="_blank">
-      <div class="resource-icon">🐙</div>
-      <div>
-        <h4>GitHub</h4>
-        <p>Control de versiones y portafolio de proyectos</p>
-      </div>
+  <div class="cards-grid">
+    <a class="card" href="https://github.com/" target="_blank">
+      <div class="card-icon">🐙</div>
+      <h3>GitHub</h3>
+      <p>Control de versiones</p>
     </a>
-    <a class="resource-card" href="https://stackoverflow.com/" target="_blank">
-      <div class="resource-icon">❓</div>
-      <div>
-        <h4>Stack Overflow</h4>
-        <p>Preguntas y respuestas técnicas de la comunidad</p>
-      </div>
-    </a>
-    <a class="resource-card" href="https://devdocs.io/" target="_blank">
-      <div class="resource-icon">📚</div>
-      <div>
-        <h4>DevDocs</h4>
-        <p>Documentación unificada de muchos lenguajes</p>
-      </div>
-    </a>
-    <a class="resource-card" href="https://replit.com/" target="_blank">
-      <div class="resource-icon">▶️</div>
-      <div>
-        <h4>Replit</h4>
-        <p>Compilar y probar código desde el navegador</p>
-      </div>
-    </a>
-    <a class="resource-card" href="https://www.youtube.com/@MitOpenCourseWare" target="_blank">
-      <div class="resource-icon">🎓</div>
-      <div>
-        <h4>MIT OpenCourseWare</h4>
-        <p>Cursos universitarios gratuitos del MIT</p>
-      </div>
-    </a>
-    <a class="resource-card" href="https://roadmap.sh/" target="_blank">
-      <div class="resource-icon">🗺️</div>
-      <div>
-        <h4>roadmap.sh</h4>
-        <p>Rutas de aprendizaje para cada área de sistemas</p>
-      </div>
+    <a class="card" href="https://roadmap.sh/" target="_blank">
+      <div class="card-icon">🗺️</div>
+      <h3>Roadmap.sh</h3>
+      <p>Rutas de aprendizaje</p>
     </a>
   </div>
 
+  <footer style="margin-top: 5rem; padding-top: 2rem; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.8rem;">
+    Hecho por <strong> Ing Daniel Jose Gomez S.</strong>
+  </footer>
 </main>
 
-<footer>
-  Hecho por <strong>Daniel</strong> · Ing. Sistemas, Universidad Distrital Francisco José de Caldas · Bogotá
-</footer>
+<script src="src/js/main.js"></script>
 
 </body>
 </html>
