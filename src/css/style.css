@@ -209,9 +209,46 @@ main {
 ::-webkit-scrollbar-thumb { background: var(--surface-light); border-radius: 10px; border: 2px solid var(--bg); }
 ::-webkit-scrollbar-thumb:hover { background: var(--neon-blue); }
 
-/* Mobile */
-@media (max-width: 1000px) {
-    body { flex-direction: column; }
-    #sidebar-container { width: 100%; height: auto; position: relative; border-right: none; border-bottom: 1px solid var(--border); }
-    main { margin-left: 0; padding: 2rem 1.5rem; }
+/* Mobile and Tablet Adjustments */
+@media (max-width: 768px) {
+    main {
+        padding: 5rem 1.5rem 2rem;
+    }
+
+    .hero h1 {
+        font-size: clamp(2rem, 10vw, 3rem);
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr; /* Stack cards on mobile */
+        gap: 1rem;
+    }
+
+    #sidebar-container {
+        width: 85%; /* Don't cover 100% so users can see the overlay */
+        left: -85%;
+    }
+
+    #sidebar-container.active {
+        left: 0;
+    }
+
+    .menu-toggle {
+        top: 15px;
+        left: 15px;
+        padding: 10px;
+    }
+}
+
+/* Touch Device Optimization */
+@media (hover: none) {
+    .card:hover {
+        transform: none;
+        box-shadow: none;
+    }
+    
+    .enter-btn:active {
+        background: var(--neon-blue);
+        color: var(--bg);
+    }
 }
