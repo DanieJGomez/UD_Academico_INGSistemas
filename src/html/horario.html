@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Horario - Academica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/horario.css">
+</head>
+<body>
+
+<!-- HAMBURGER BUTTON -->
+<button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+</button>
+
+<!-- MODULAR SIDEBAR -->
+<aside id="sidebar-container" class="collapsed"></aside>
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+<main>
+    <div class="horario-header">
+        <a href="../../index.html" class="back-link">← Volver al inicio</a>
+        <h1>Mi <em>Horario</em></h1>
+        <p>Organiza tus clases y actividades semanales de forma dinámica.</p>
+    </div>
+
+    <div class="horario-controls">
+        <button id="add-class-btn" class="action-btn">＋ Agregar Clase</button>
+        <button id="reset-horario-btn" class="action-btn secondary">Restablecer</button>
+    </div>
+
+    <div class="table-container">
+        <table id="horario-table">
+            <thead>
+                <tr>
+                    <th>Hora</th>
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Miércoles</th>
+                    <th>Jueves</th>
+                    <th>Viernes</th>
+                    <th>Sábado</th>
+                </tr>
+            </thead>
+            <tbody id="horario-body">
+                <!-- Se generará dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal para agregar/editar -->
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal-content">
+            <h2 id="modal-title">Agregar Clase</h2>
+            <form id="class-form">
+                <div class="form-group">
+                    <label for="class-name">Materia</label>
+                    <input type="text" id="class-name" required placeholder="Ej: Cálculo Diferencial">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="class-day">Día</label>
+                        <select id="class-day" required>
+                            <option value="1">Lunes</option>
+                            <option value="2">Martes</option>
+                            <option value="3">Miércoles</option>
+                            <option value="4">Jueves</option>
+                            <option value="5">Viernes</option>
+                            <option value="6">Sábado</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="class-time">Hora</label>
+                        <select id="class-time" required>
+                            <!-- Se generará dinámicamente -->
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="class-room">Salón / Link</label>
+                    <input type="text" id="class-room" placeholder="Ej: Laboratorio 402 / Zoom">
+                </div>
+                <div class="modal-actions">
+                    <button type="button" id="cancel-btn" class="action-btn secondary">Cancelar</button>
+                    <button type="submit" class="action-btn">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer style="margin-top: 5rem; padding-top: 2rem; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.8rem;">
+        Hecho por <strong> Ing Daniel Jose Gomez S.</strong>
+    </footer>
+</main>
+
+<script>
+    window.sidebarPath = 'sidebar.html';
+</script>
+<script src="../js/main.js"></script>
+<script src="../js/horario.js"></script>
+
+</body>
+</html>

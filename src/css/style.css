@@ -181,6 +181,28 @@ main {
 }
 .card-links a:hover { color: var(--neon-blue); }
 
+.enter-btn {
+    display: block;
+    margin-top: 1.5rem;
+    padding: 0.8rem;
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid var(--neon-blue);
+    border-radius: 8px;
+    color: var(--neon-blue);
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.enter-btn:hover {
+    background: var(--neon-blue);
+    color: var(--bg);
+    box-shadow: 0 0 15px var(--neon-glow);
+}
+
 /* Custom Scrollbar for Main */
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--bg); }

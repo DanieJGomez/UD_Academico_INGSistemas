@@ -1,0 +1,211 @@
+:root {
+    --horario-accent: #FF00FF; /* Neon Pink for Schedule */
+    --horario-glow: rgba(255, 0, 255, 0.3);
+}
+
+.horario-header {
+    margin-bottom: 3rem;
+}
+
+.horario-header h1 em {
+    color: var(--horario-accent);
+    text-shadow: 0 0 20px var(--horario-glow);
+}
+
+.horario-controls {
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.action-btn {
+    padding: 0.8rem 1.5rem;
+    background: var(--horario-accent);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px var(--horario-glow);
+}
+
+.action-btn.secondary {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+}
+
+.action-btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    box-shadow: none;
+}
+
+/* Table Styles */
+.table-container {
+    overflow-x: auto;
+    background: var(--surface);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+th {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 1.2rem;
+    text-align: center;
+    font-family: 'Syne', sans-serif;
+    color: #fff;
+    border-bottom: 2px solid var(--border);
+}
+
+td {
+    padding: 0.5rem;
+    border: 1px solid rgba(0, 255, 255, 0.05);
+    height: 80px;
+    vertical-align: top;
+    width: 14%;
+}
+
+.time-cell {
+    width: 80px;
+    background: rgba(255, 255, 255, 0.01);
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.class-entry {
+    background: rgba(255, 0, 255, 0.1);
+    border-left: 3px solid var(--horario-accent);
+    padding: 0.8rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.class-entry:hover {
+    background: rgba(255, 0, 255, 0.15);
+}
+
+.class-entry h4 {
+    color: #fff;
+    margin-bottom: 0.2rem;
+    font-size: 0.85rem;
+}
+
+.class-entry p {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+}
+
+.delete-class {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: var(--text-muted);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 1rem;
+}
+
+.class-entry:hover .delete-class {
+    opacity: 1;
+}
+
+.delete-class:hover {
+    color: #ff4444;
+}
+
+/* Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--surface);
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 1px solid var(--horario-accent);
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 0 30px var(--horario-glow);
+}
+
+.modal-content h2 {
+    font-family: 'Syne', sans-serif;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+label {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: #fff;
+    font-family: inherit;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--horario-accent);
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+}

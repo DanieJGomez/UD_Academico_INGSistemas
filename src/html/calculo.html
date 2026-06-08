@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo Diferencial - Academica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/materia.css">
+</head>
+<body>
+
+<!-- HAMBURGER BUTTON -->
+<button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+</button>
+
+<!-- MODULAR SIDEBAR -->
+<aside id="sidebar-container" class="collapsed"></aside>
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+<main>
+    <div class="subject-header">
+        <a href="../../index.html" class="back-link">← Volver al inicio</a>
+        <h1>Cálculo <em>Diferencial</em></h1>
+        <p class="subject-subtitle">El estudio del cambio y el movimiento a través de las derivadas.</p>
+    </div>
+
+    <div class="subject-grid">
+        <!-- Resumen -->
+        <section class="subject-section" id="resumen">
+            <h2>Resumen</h2>
+            <div class="section-content">
+                <p>El cálculo diferencial es una parte del análisis matemático que consiste en el estudio de cómo cambian las funciones cuando sus variables cambian. El principal objeto de estudio en el cálculo diferencial es la derivada.</p>
+            </div>
+        </section>
+
+        <!-- Temario -->
+        <section class="subject-section" id="temario">
+            <h2>Temario</h2>
+            <div class="section-content">
+                <ul class="custom-list">
+                    <li>Unidad 1: Funciones y Modelos</li>
+                    <li>Unidad 2: Límites y Continuidad</li>
+                    <li>Unidad 3: Reglas de Derivación</li>
+                    <li>Unidad 4: Aplicaciones de la Diferenciación (Optimización)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Herramientas -->
+        <section class="subject-section" id="herramientas">
+            <h2>Herramientas</h2>
+            <div class="section-content tools-grid">
+                <div class="tool-card">
+                    <span class="tool-icon">📉</span>
+                    <h3>Desmos</h3>
+                    <p>Calculadora gráfica excelente para visualizar funciones.</p>
+                </div>
+                <div class="tool-card">
+                    <span class="tool-icon">📐</span>
+                    <h3>GeoGebra</h3>
+                    <p>Software matemático dinámico para todos los niveles.</p>
+                </div>
+                <div class="tool-card">
+                    <span class="tool-icon">🔢</span>
+                    <h3>Symbolab</h3>
+                    <p>Solucionador de problemas paso a paso.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enlaces Útiles -->
+        <section class="subject-section" id="enlaces">
+            <h2>Enlaces Útiles</h2>
+            <div class="section-content">
+                <ul class="link-list-styled">
+                    <li><a href="https://www.khanacademy.org/math/differential-calculus" target="_blank">Khan Academy - Cálculo</a></li>
+                    <li><a href="https://www.stewartcalculus.com/" target="_blank">Sitio de James Stewart</a></li>
+                    <li><a href="https://es.symbolab.com/" target="_blank">Calculadora Symbolab</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Bibliografía -->
+        <section class="subject-section" id="bibliografia">
+            <h2>Bibliografía</h2>
+            <div class="section-content">
+                <ul class="custom-list">
+                    <li><strong>Cálculo de una variable:</strong> James Stewart (Trascendentes tempranas).</li>
+                    <li><strong>Cálculo:</strong> George B. Thomas.</li>
+                    <li><strong>El Cálculo:</strong> Louis Leithold.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Biblioteca de PDFs -->
+        <section class="subject-section full-width" id="biblioteca">
+            <h2>Biblioteca Digital</h2>
+            <p style="margin-bottom: 1.5rem; color: var(--text-muted);">Los libros se abrirán en una nueva pestaña para su lectura.</p>
+            <div class="pdf-grid">
+                <div class="pdf-card">
+                    <div class="pdf-icon">📕</div>
+                    <div class="pdf-info">
+                        <h3>Cálculo: Trascendentes Tempranas - Stewart</h3>
+                        <p>PDF · 45 MB</p>
+                    </div>
+                    <a href="../images/stewart-calculo.pdf" target="_blank" class="pdf-view-btn">Leer Libro</a>
+                </div>
+                <div class="pdf-card">
+                    <div class="pdf-icon">📘</div>
+                    <div class="pdf-info">
+                        <h3>Problemario de Límites y Derivadas</h3>
+                        <p>PDF · 8 MB</p>
+                    </div>
+                    <a href="../images/problemas-calculo.pdf" target="_blank" class="pdf-view-btn">Leer Libro</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer style="margin-top: 5rem; padding-top: 2rem; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.8rem;">
+        Hecho por <strong> Ing Daniel Jose Gomez S.</strong>
+    </footer>
+</main>
+
+<script>
+    window.sidebarPath = 'sidebar.html';
+</script>
+<script src="../js/main.js"></script>
+
+</body>
+</html>

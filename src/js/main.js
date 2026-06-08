@@ -21,11 +21,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.warn('Fetch may fail on file:// protocol. Use a local server for modular features.');
             }
             
-            const response = await fetch('src/html/sidebar.html');
-            if (!response.ok) throw new Error('Failed to load sidebar.html');
+            const sidebarPath = window.sidebarPath || 'src/html/sidebar.html';
+            const response = await fetch(sidebarPath);
+            if (!response.ok) throw new Error(`Failed to load ${sidebarPath}`);
             
             const html = await response.text();
             sidebarContainer.innerHTML = html;
+
+            // Fix links if we are inside src/html/
+            if (window.sidebarPath) {
+                const links = sidebarContainer.querySelectorAll('a');
+                links.forEach(link => {
+                    let href = link.getAttribute('href');
+                    if (href) {
+                        if (href.startsWith('src/html/')) {
+                            // If link is to another html page in the same folder
+                            link.setAttribute('href', href.replace('src/html/', ''));
+                        } else if (href.startsWith('index.html')) {
+                            // Link back to root
+                            link.setAttribute('href', '../../' + href);
+                        }
+                    }
+                });
+            }
             
             // Initialize Sidebar Features after loading
             initAccordion();
