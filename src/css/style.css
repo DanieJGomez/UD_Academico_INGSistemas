@@ -22,81 +22,96 @@ body {
     min-height: 100vh;
 }
 
-/* ── SIDEBAR (Modular Container) ── */
+/* ── NUEVO SIDEBAR (Modular y Robusto) ── */
 #sidebar-container {
     width: var(--sidebar-width);
     height: 100vh;
     background: var(--surface);
     border-right: 1px solid var(--border);
-    position: fixed; top: 0; left: -280px; /* Hidden by default */
+    position: fixed; top: 0; left: -280px; 
     z-index: 1001;
     overflow-y: auto;
     transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 10px 0 30px rgba(0,0,0,0.5);
 }
 
-#sidebar-container.active {
-    left: 0;
-}
+#sidebar-container.active { left: 0; }
 
-/* Sidebar Internal Styles */
 .sidebar-inner {
     display: flex; flex-direction: column;
-    height: 100%;
-    padding: 1.5rem 0;
+    min-height: 100%;
+    padding: 1.5rem 0 4rem;
 }
 
-.sidebar-header { padding: 0 1.5rem 2rem; }
+/* Cabecera */
+.sidebar-header { padding: 0 1.5rem 2rem; flex-shrink: 0; }
 .nav-brand {
     font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem;
     color: #fff; display: flex; align-items: center; gap: 10px;
 }
-.nav-brand .dot {
-    width: 8px; height: 8px; border-radius: 50%; background: var(--ud-gold);
-}
+.nav-brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ud-gold); }
 
-.sidebar-inner h3 {
+/* Grupos de Navegación */
+.sidebar-group { flex-shrink: 0; margin-bottom: 1.5rem; }
+.sidebar-group h3 {
     font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em;
-    color: var(--text-muted); padding: 0 1.5rem 0.8rem; margin-top: 1.5rem;
+    color: var(--text-muted); padding: 0 1.5rem 0.8rem;
 }
 
-/* NAVIGATION SECTION */
-.main-nav .nav-links { list-style: none; }
-.main-nav .nav-links a {
+/* Links de Navegación Simple */
+.nav-links { list-style: none; }
+.nav-links a {
     display: block; padding: 0.7rem 1.5rem;
     color: var(--text-muted); text-decoration: none;
     font-size: 0.9rem; transition: 0.2s;
+    border-left: 3px solid transparent;
 }
-.main-nav .nav-links a:hover, .main-nav .nav-links a.active {
+.nav-links a:hover, .nav-links a.active {
     color: var(--neon-blue); background: rgba(0, 255, 255, 0.05);
-    border-left: 3px solid var(--neon-blue);
+    border-left-color: var(--neon-blue);
 }
 
-.sidebar-divider { height: 1px; background: var(--border); margin: 2rem 0; }
+.special-link a {
+    color: var(--neon-blue) !important; font-weight: bold;
+    margin-top: 10px; border-top: 1px solid var(--border); padding-top: 15px;
+}
 
-/* AI ACCORDION SECTION */
-.ai-accordion .accordion-item { border-bottom: 1px solid rgba(0, 255, 255, 0.05); }
+.sidebar-divider { height: 1px; background: var(--border); margin: 1rem 0 2rem; flex-shrink: 0; }
+
+/* Acordeón de IA (Dashboard) */
+.accordion-item { border-bottom: 1px solid rgba(255, 255, 255, 0.03); }
 .accordion-header {
     width: 100%; padding: 1rem 1.5rem; background: transparent; border: none;
     display: flex; align-items: center; justify-content: space-between;
-    cursor: pointer; color: #fff;
+    cursor: pointer; color: #eee; transition: 0.3s;
 }
+.accordion-header:hover { background: rgba(255, 255, 255, 0.02); }
 .header-text { font-family: 'Syne', sans-serif; font-size: 0.9rem; font-weight: 600; }
 .accordion-item.active .header-text { color: var(--neon-blue); }
-.chevron { transition: transform 0.3s; color: var(--text-muted); }
-.accordion-item.active .chevron { transform: rotate(180deg); }
+
+.arrow { font-size: 0.6rem; transition: transform 0.3s; opacity: 0.5; }
+.accordion-item.active .arrow { transform: rotate(180deg); opacity: 1; }
 
 .accordion-content {
-    max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     background: rgba(0, 0, 0, 0.2);
+    display: flex; flex-direction: column;
 }
-.accordion-item.active .accordion-content { max-height: 400px; }
-.link-list { list-style: none; padding: 0.5rem 0; }
-.link-list a {
-    display: block; padding: 0.7rem 2.5rem; color: var(--text-muted);
-    text-decoration: none; font-size: 0.85rem; transition: 0.2s;
+
+.accordion-item.active .accordion-content {
+    max-height: 800px; /* Suficiente para muchos links */
+    padding: 0.5rem 0 1rem;
 }
-.link-list a:hover { color: #fff; background: rgba(0, 255, 255, 0.1); padding-left: 2.8rem; }
+
+.accordion-content a {
+    display: block; padding: 0.7rem 2.5rem;
+    color: var(--text-muted); text-decoration: none;
+    font-size: 0.85rem; transition: 0.2s;
+}
+.accordion-content a:hover {
+    color: #fff; background: rgba(0, 255, 255, 0.1); padding-left: 2.8rem;
+}
 
 /* Sidebar Overlay */
 .sidebar-overlay {

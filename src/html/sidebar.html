@@ -1,15 +1,18 @@
 <div class="sidebar-inner">
+    
+    <!-- CABECERA -->
     <div class="sidebar-header">
         <div class="nav-brand">
             <span class="dot"></span>
-            Daniel · Sistemas
+            Daniel ING Sistemas
         </div>
     </div>
 
-    <nav class="main-nav">
+    <!-- 1. NAVEGACIÓN -->
+    <nav class="sidebar-group">
         <h3>Navegación</h3>
         <ul class="nav-links">
-            <li><a href="index.html#sem1" class="active">1er Semestre</a></li>
+            <li><a href="index.html#sem1">1er Semestre</a></li>
             <li><a href="index.html#sem2">2do Semestre</a></li>
             <li><a href="index.html#sem3">3ro Semestre</a></li>
             <li><a href="index.html#sem4">4to Semestre</a></li>
@@ -19,56 +22,64 @@
             <li><a href="index.html#sem8">8vo Semestre</a></li>
             <li><a href="index.html#sem9">9no Semestre</a></li>
             <li><a href="index.html#recursos">Recursos</a></li>
-            <li><a href="src/html/horario.html" style="color: var(--neon-blue); font-weight: bold; margin-top: 10px; border-top: 1px solid var(--border); padding-top: 15px;">📅 Mi Horario</a></li>
+            <li class="special-link"><a href="src/html/horario.html">📅 Mi Horario</a></li>
         </ul>
     </nav>
 
     <div class="sidebar-divider"></div>
-
-    <nav class="ai-accordion">
+    <!-- 2. AI DASHBOARD (ACORDEÓN) -->
+    <nav class="sidebar-group">
         <h3>AI Dashboard</h3>
-        <!-- Topic 1 -->
+        <!-- SECCIÓN: PRESENTACIONES -->
         <div class="accordion-item">
-            <button class="accordion-header">
-                <span class="header-text">Generación de Texto</span>
-                <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
+            <div class="accordion-header">
+                <span class="header-text">Presentaciones</span>
+                <span class="arrow">▼</span>
+            </div>
             <div class="accordion-content">
-                <ul class="link-list">
-                    <li><a href="https://chat.openai.com" target="_blank">ChatGPT</a></li>
-                    <li><a href="https://claude.ai" target="_blank">Claude AI</a></li>
-                    <li><a href="https://gemini.google.com" target="_blank">Google Gemini</a></li>
-                </ul>
+                <a href="https://www.popai.pro/es/ai-presentation" target="_blank">PopAI</a>
+                <a href="https://gamma.app" target="_blank">Gamma</a>
+            </div>
+        </div>
+        <!-- SECCIÓN: CHATBOTS -->
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <span class="header-text">ChatBots</span>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="accordion-content">
+                <a href="https://chat.openai.com" target="_blank">ChatGPT</a>
+                <a href="https://claude.ai" target="_blank">Claude AI</a>
+                <a href="https://gemini.google.com" target="_blank">Google Gemini</a>
+                <a href="https://chat.qwen.ai" target="_blank">Qwen</a>
+                <a href="https://knowunity.co/webapp" target="_blank">Knowunity</a>
+                <a href="https://chat.deepseek.com" target="_blank">Deepseek</a>
+                <a href="https://copilot.microsoft.com">Copilot</a>
+            </div>
+        </div>
+        <!-- SECCIÓN: INVESTIGACIÓN -->
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <span class="header-text">Investigación</span>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="accordion-content">
+                <a href="https://www.perplexity.ai" target="_blank">Perplexity</a>
+                <a href="https://notebooklm.google.com" target="_blank">Notebooklm</a>
+                <a href="https://skywork.ai" target="_blank">Skywork</a>
             </div>
         </div>
 
-        <!-- Topic 2 -->
+        <!-- SECCIÓN: EMOCIONAL -->
         <div class="accordion-item">
-            <button class="accordion-header">
-                <span class="header-text">Imagen y Arte</span>
-                <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
+            <div class="accordion-header">
+                <span class="header-text">Emocional</span>
+                <span class="arrow">▼</span>
+            </div>
             <div class="accordion-content">
-                <ul class="link-list">
-                    <li><a href="https://www.midjourney.com" target="_blank">Midjourney</a></li>
-                    <li><a href="https://openai.com/dall-e-3" target="_blank">DALL-E 3</a></li>
-                    <li><a href="https://leonardo.ai" target="_blank">Leonardo.ai</a></li>
-                </ul>
+                <a href="https://pi.ai/" target="_blank">Pi AI</a>
             </div>
         </div>
 
-        <!-- Topic 3 -->
-        <div class="accordion-item">
-            <button class="accordion-header">
-                <span class="header-text">Código y Dev</span>
-                <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="accordion-content">
-                <ul class="link-list">
-                    <li><a href="https://cursor.sh" target="_blank">Cursor</a></li>
-                    <li><a href="https://github.com/features/copilot" target="_blank">GitHub Copilot</a></li>
-                </ul>
-            </div>
-        </div>
     </nav>
 </div>
