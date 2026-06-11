@@ -1,0 +1,69 @@
+/* ── SECTION TITLES ── */
+.section-header { margin: 4rem 0 2rem; }
+.section-header h2 { font-family: 'Syne', sans-serif; color: #fff; font-size: 1.5rem; }
+.section-line { height: 1px; background: var(--border); margin-top: 10px; }
+
+/* ── SUBJECT CARDS ── */
+.cards-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem;
+}
+.card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 1.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none; /* In case it's an anchor */
+}
+.card:hover {
+    transform: translateY(-5px); border-color: var(--neon-blue);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px var(--neon-glow);
+}
+
+.card h3 { font-family: 'Syne', sans-serif; color: #fff; font-size: 1rem; margin: 1rem 0; }
+.card p { color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem; }
+.card-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+
+.topic-tag {
+    font-size: 0.7rem; padding: 4px 10px; border-radius: 99px;
+    background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(0, 255, 255, 0.1);
+    color: var(--text-muted); margin: 0 4px 4px 0; display: inline-block;
+}
+.card-links { margin-top: 1rem; }
+.card-links a {
+    display: flex; align-items: center; gap: 8px;
+    color: var(--text-muted); text-decoration: none; font-size: 0.8rem; margin-top: 6px;
+}
+.card-links a:hover { color: var(--neon-blue); }
+
+.enter-btn {
+    display: block;
+    margin-top: 1.5rem;
+    padding: 0.8rem;
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid var(--neon-blue);
+    border-radius: 8px;
+    color: var(--neon-blue);
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.enter-btn:hover {
+    background: var(--neon-blue);
+    color: var(--bg);
+    box-shadow: 0 0 15px var(--neon-glow);
+}
+
+/* Specific card colors if needed */
+.card.s1 { border-left: 4px solid var(--neon-blue); }
+.card.s2 { border-left: 4px solid #ff00ff; }
+.card.s3 { border-left: 4px solid #00ff00; }
+.card.s4 { border-left: 4px solid #ffff00; }
+.card.s5 { border-left: 4px solid #ff8800; }
+.card.s6 { border-left: 4px solid #ff0000; }
+.card.s7 { border-left: 4px solid #8800ff; }
+.card.s8 { border-left: 4px solid #0088ff; }
+.card.s9 { border-left: 4px solid #ffffff; }
+.card.s10 { border-left: 4px solid var(--ud-gold); }

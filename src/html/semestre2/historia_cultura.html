@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia y Cultura - Academica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/materia.css">
+</head>
+<body>
+
+<!-- HAMBURGER BUTTON -->
+<button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+</button>
+
+<!-- MODULAR SIDEBAR -->
+<aside id="sidebar-container" class="collapsed"></aside>
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+<main>
+    <div class="subject-header">
+        <a href="../../../index.html" class="back-link">← Volver al inicio</a>
+        <h1>Historia y <em>Cultura</em></h1>
+        <p class="subject-subtitle">Evolución de la sociedad humana y sus manifestaciones culturales.</p>
+    </div>
+
+    <div class="subject-grid">
+        <!-- Resumen -->
+        <section class="subject-section" id="resumen">
+            <h2>Resumen</h2>
+            <div class="section-content">
+                <p>Análisis de los procesos históricos más relevantes que han moldeado la civilización contemporánea, explorando la diversidad cultural y el desarrollo del pensamiento humano.</p>
+            </div>
+        </section>
+
+        <!-- Temario -->
+        <section class="subject-section" id="temario">
+            <h2>Temario</h2>
+            <div class="section-content">
+                <ul class="custom-list">
+                    <li>Prehistoria y Primeras Civilizaciones</li>
+                    <li>Edad Media y Renacimiento</li>
+                    <li>Revoluciones Industriales y Modernidad</li>
+                    <li>Globalización y Cultura Contemporánea</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Recursos -->
+        <section class="subject-section" id="recursos">
+            <h2>Recursos</h2>
+            <div class="section-content">
+                <div class="resource-grid">
+                    <div class="resource-card"><span class="tool-icon">🌍</span><h3>National Geographic</h3><p>Artículos sobre historia y culturas del mundo.</p></div>
+                    <div class="resource-card"><span class="tool-icon">📜</span><h3>Google Arts & Culture</h3><p>Recorridos virtuales por museos y patrimonio.</p></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer style="margin-top: 5rem; padding-top: 2rem; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.8rem;">
+        Hecho por <strong> Ing Daniel Jose Gomez S.</strong>
+    </footer>
+</main>
+
+<script>window.sidebarPath = '../../sidebar.html';</script>
+<script src="../../js/main.js"></script>
+
+</body>
+</html>

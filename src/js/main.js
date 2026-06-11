@@ -16,42 +16,71 @@ document.addEventListener('DOMContentLoaded', () => {
     // Modular Loading Function
     const loadSidebar = async () => {
         try {
-            // Check if we are running on file:// protocol (CORS issue)
-            if (window.location.protocol === 'file:') {
-                console.warn('Fetch may fail on file:// protocol. Use a local server for modular features.');
-            }
-            
+            const sidebarContainer = document.getElementById('sidebar-container');
+            if (!sidebarContainer) return;
+
             const sidebarPath = window.sidebarPath || 'src/html/sidebar.html';
             const response = await fetch(sidebarPath);
             if (!response.ok) throw new Error(`Failed to load ${sidebarPath}`);
-            
-            const html = await response.text();
-            sidebarContainer.innerHTML = html;
 
-            // Fix links if we are inside src/html/
-            if (window.sidebarPath) {
-                const links = sidebarContainer.querySelectorAll('a');
-                links.forEach(link => {
-                    let href = link.getAttribute('href');
-                    if (href) {
-                        if (href.startsWith('src/html/')) {
-                            // If link is to another html page in the same folder
-                            link.setAttribute('href', href.replace('src/html/', ''));
-                        } else if (href.startsWith('index.html')) {
-                            // Link back to root
-                            link.setAttribute('href', '../../' + href);
-                        }
-                    }
-                });
-            }
-            
-            // Initialize Sidebar Features after loading
-            initAccordion();
-            initNavHighlight();
-            
-            // Close sidebar when clicking links
+            const html = await response.text();
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            const sidebarContent = doc.querySelector('.sidebar-inner') || doc.body || doc.documentElement;
+            sidebarContainer.innerHTML = sidebarContent.innerHTML;
+
+            const currentUrl = new URL(window.location.href);
+            const sidebarAbsoluteUrl = new URL(sidebarPath, currentUrl);
+            const appRootUrl = new URL('../../', sidebarAbsoluteUrl);
+
+            const calculateRelativePath = (fromUrl, toUrl) => {
+                if (fromUrl.origin !== toUrl.origin) return toUrl.href;
+                const fromSegments = fromUrl.pathname.split('/').filter(Boolean);
+                const toSegments = toUrl.pathname.split('/').filter(Boolean);
+                fromSegments.pop();
+
+                let i = 0;
+                while (i < fromSegments.length && i < toSegments.length && fromSegments[i] === toSegments[i]) {
+                    i++;
+                }
+
+                const up = fromSegments.length - i;
+                const relativeSegments = [...Array(up).fill('..'), ...toSegments.slice(i)];
+                let relativePath = relativeSegments.join('/');
+                if (toUrl.search) relativePath += toUrl.search;
+                if (toUrl.hash) relativePath += toUrl.hash;
+                return relativePath || '.';
+            };
+
             const links = sidebarContainer.querySelectorAll('a');
             links.forEach(link => {
+                const href = link.getAttribute('href');
+                if (!href) return;
+
+                const trimmedHref = href.trim();
+                if (
+                    trimmedHref.startsWith('http://') ||
+                    trimmedHref.startsWith('https://') ||
+                    trimmedHref.startsWith('mailto:') ||
+                    trimmedHref.startsWith('tel:') ||
+                    trimmedHref.startsWith('#')
+                ) {
+                    return;
+                }
+
+                try {
+                    const targetUrl = new URL(trimmedHref, appRootUrl);
+                    const relativeHref = calculateRelativePath(currentUrl, targetUrl);
+                    link.setAttribute('href', relativeHref);
+                } catch (linkError) {
+                    console.warn('Could not normalize sidebar link:', href, linkError);
+                }
+            });
+
+            initAccordion();
+
+            const linksToClose = sidebarContainer.querySelectorAll('a');
+            linksToClose.forEach(link => {
                 link.addEventListener('click', () => {
                     if (sidebarContainer.classList.contains('active')) toggleSidebar();
                 });
@@ -59,9 +88,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
         } catch (error) {
             console.error('Error loading sidebar:', error);
-            // Fallback for file:// or other errors
-            sidebarContainer.innerHTML = '<div style="padding:2rem;color:red;">Error: No se pudo cargar el menú lateral. Asegúrate de usar un servidor local (Live Server).</div>';
+            const sidebarContainer = document.getElementById('sidebar-container');
+            if (sidebarContainer) sidebarContainer.innerHTML = '<div style="padding:2rem;color:red;">Error: No se pudo cargar el menú lateral.</div>';
         }
+    };
+
+    const loadSemesters = async () => {
+        const container = document.getElementById('semesters-container');
+        if (!container) return;
+
+        const semestersToLoad = 10;
+        let allHtml = '';
+
+        for (let i = 1; i <= semestersToLoad; i++) {
+            try {
+                const response = await fetch(`src/semestres/semestre${i}.html`);
+                if (response.ok) {
+                    const html = await response.text();
+                    allHtml += html;
+                }
+            } catch (error) {
+                console.warn(`Could not load semestre ${i}:`, error);
+            }
+        }
+        container.innerHTML = allHtml;
+    };
+
+    const init = async () => {
+        // Check if we are running on file:// protocol (CORS issue)
+        if (window.location.protocol === 'file:') {
+            console.warn('Fetch may fail on file:// protocol. Use a local server for modular features.');
+        }
+
+        await Promise.all([loadSidebar(), loadSemesters()]);
+        initNavHighlight();
     };
 
     const initAccordion = () => {
@@ -102,5 +162,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    loadSidebar();
+    init();
 });

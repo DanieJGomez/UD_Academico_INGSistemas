@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo Integral - Academica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/materia.css">
+</head>
+<body>
+
+<!-- HAMBURGER BUTTON -->
+<button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+</button>
+
+<!-- MODULAR SIDEBAR -->
+<aside id="sidebar-container" class="collapsed"></aside>
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+<main>
+    <div class="subject-header">
+        <a href="../../../index.html" class="back-link">← Volver al inicio</a>
+        <h1>Cálculo <em>Integral</em></h1>
+        <p class="subject-subtitle">Teoría de la integración y sus aplicaciones en ingeniería.</p>
+    </div>
+
+    <div class="subject-grid">
+        <!-- Resumen -->
+        <section class="subject-section" id="resumen">
+            <h2>Resumen</h2>
+            <div class="section-content">
+                <p>El cálculo integral es una rama de las matemáticas en el proceso de integración o antiderivación. Es muy común en la ingeniería y en la ciencia; se utiliza principalmente para el cálculo de áreas y volúmenes de regiones y sólidos de revolución.</p>
+            </div>
+        </section>
+
+        <!-- Temario -->
+        <section class="subject-section" id="temario">
+            <h2>Temario</h2>
+            <div class="section-content">
+                <ul class="custom-list">
+                    <li>La Integral Indefinida</li>
+                    <li>Técnicas de Integración (Sustitución, Partes)</li>
+                    <li>Integral Definida y Teorema Fundamental del Cálculo</li>
+                    <li>Aplicaciones de la Integral (Áreas y Volúmenes)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Recursos -->
+        <section class="subject-section" id="recursos">
+            <h2>Recursos</h2>
+            <div class="section-content">
+                <div class="resource-grid">
+                    <div class="resource-card"><span class="tool-icon">📉</span><h3>WolframAlpha</h3><p>Resolución de integrales complejas.</p></div>
+                    <div class="resource-card"><span class="tool-icon">🎥</span><h3>JulioProfe</h3><p>Tutoriales detallados de integración.</p></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer style="margin-top: 5rem; padding-top: 2rem; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.8rem;">
+        Hecho por <strong> Ing Daniel Jose Gomez S.</strong>
+    </footer>
+</main>
+
+<script>window.sidebarPath = '../../sidebar.html';</script>
+<script src="../../js/main.js"></script>
+
+</body>
+</html>
